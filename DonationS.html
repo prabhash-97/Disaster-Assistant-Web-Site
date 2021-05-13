@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="SiteC.css"/>
+
+<style>:root { --j: 0; --p1: 1.5 }
+  .p1:nth-child(2n) { --j: 1 }
+</style>
+<style>
+
+#btn--yp {
+  box-sizing: content-box;
+  position: fixed;
+  z-index: 9;
+  bottom: 1em;
+  right: 1em;
+  border: solid 1em transparent;
+  width: 4.625em;
+  height: 3.25em;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/icon-yp.svg) 50%/cover content-box;
+  font: 16px/ 1.25 trebuchet ms, sans-serif;
+  text-indent: 200vw;
+  text-shadow: none;
+  filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
+  transition: .5s;
+  white-space: nowrap;
+}
+#btn--yp:before {
+  box-sizing: inherit;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin: 1em -.5em;
+  padding: .5em;
+  width: 100%;
+  border-radius: 5px;
+  background: #e8e0e0;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0vw;
+  white-space: normal;
+  animation: float 1s ease-in-out infinite alternate;
+  content: attr(data-txt);
+}
+#btn--yp:hover, #btn--yp:focus {
+  outline: none;
+  filter: grayscale(0) drop-shadow(0 0 1px crimson);
+}
+
+@keyframes float {
+  to {
+    transform: translateY(0.75em);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+  counter-reset: p;
+}
+
+.p1 {
+  margin-top: 120px;
+  align-items: center;
+  position: relative;
+  width: 600px;
+  color: black;
+  font: 20px roboto, sans-serif;
+  background-color: white;
+  opacity: 0.6;
+  
+}
+h1{
+  color: #8B0000;
+  margin: 20 0 10 0px;
+}
+.p2{
+  margin-bottom: 20px;
+}
+
+body{
+  background-color:white;
+}
+
+.donation-interface{
+  padding: 50px 20px 100px 20px;
+  display: block;
+}
+
+.btn-amount-group{
+  margin-bottom: 20px;
+  width: 100%;
+}
+.btn-amount{
+  border: 2px solid #FF0000;
+  background-color:#F5F5F5;
+  color: black;
+  width: 25%;
+  height: 50px;
+}
+
+.btn-amount:hover{
+  background-color:#B22222;
+  color: #fff;
+}
+
+.btn-amount:focus , .btn-amount.active, .btn-active{
+  background-color:#B22222;
+  color: #fff;
+}
+
+
+.btn-give{
+  background-color:#B22222;
+  width: 90%;
+  height: 64px;
+  margin: 10px;
+}
+
+.btn-text{
+  color: #fff;
+  font-size: 20px;
+}
+
+#input-amount{
+  display:none;
+}
+
+.input-group{
+  width: 100%;
+  height: 64px;
+
+}
+.input-group-addon, .form-control{
+  border: 2px solid #69C4EE;
+  background-color:#fff;
+  color: #69C4EE;
+  width: 10%;
+  height: 64px;
+}
+
+.form-control{
+  color: #69C4EE;
+  font-size: 40px;
+}
+
+.funding-stats{
+  padding: 60px 20px; 
+}
+
+</style>
+
+</head>
+
+<body>
+<div>
+    <img src="Multimedia/png-clipart-donation-charitable-organization-charity-computer-icons-donate-miscellaneous-blue-removebg-preview.png" alt=""  style="max-width: 100px; max-height: 70px; padding: 15px; margin-top:-8px; margin-bottom: 5px; margin-left: -680px;" />
+    <div class="menu" style="margin-left: 0px;">   
+      <a href="Site.html">Home</a>
+      <a href="AboutS.html">About</a>
+      <a href="EventS.html">Events</a>
+      <a href="DonationS.html">Donations</a>
+      <a href="ContactS.html">Contact Us</a>
+    </div>
+</div>
+<br>
+<div class="logo-off" style="margin-top:-75px;">
+<img src="Multimedia/make-donation-flat-banner-template_94753-484.jpg">
+</div>
+
+<p class="p1"><b>01.<b/> Flood Relief is ongoing but not especially coordinated. The best thing to do at this point is A) give cash to reputed organizations (we list some below) or B) coordinate with people on the ground for what they actually need.<br><br>
+02. 
+While a lot of goods are coming in, distribution remains a problem. This means vehicles, but also boats for affected areas.
+<br><br>
+03. You can help with flood relief by making your donations to the following charities. There are many needs and different collection points.
+<br><br>
+04. Please try to donate online because it is quick and the actions can be done quickly.</p>
+
+<div class="container text-center">
+  <div class="donation-interface">
+  <h1>Donate Online</h1>
+  <p class="p2"> 100% of your donation goes towards supporting disaster affected people! </p>
+
+  <div class="form-group">
+  
+    <div class="btn-group btn-group-lg btn-amount-group" role="group" aria-lable="...">
+    <button type="button" class="btn btn-amount btn-amount-number">Rs.500</button>
+    <button type="button" class="btn btn-amount btn-amount-number" >Rs.1000</button>
+    <button type="button" class="btn btn-amount btn-amount-number">Rs.5000</button>
+    <button type="button" id="other" class="btn btn-amount">Other</button>
+  </div>
+    
+    <div id="input-amount">
+      <div class="input-group">
+        <div class="input-group-addon">Rupees</div>
+        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+        <div class="input-group-addon">Rupees</div>
+      </div>  
+    </div>
+    
+    </div>  
+    
+<div class="checkbox">
+  <label><input type="checkbox" value="monthly"/>Monthly Recurring Gift</label>
+</div>
+
+  <button type="button" class="btn btn-give"><span class="btn-text">Give By Card</span></button>
+  <button type="button" class="btn btn-give"><span class="btn-text">Paypal</span></button>
+ 
+  </div>
+
+  </div>
+  
+<footer style="width: 1400px;">
+			<ul class="navi">
+				<div class="lg">
+        <img src="Multimedia/png-clipart-donation-charitable-organization-charity-computer-icons-donate-miscellaneous-blue-removebg-preview.png" />
+        </div>
+        <p><a href="ContactS.html"><center>CONTACT US</center></a></p>
+        <p style="margin-left: 530px;">Fallon One &copy; 2021 | All rights Reserved</p>
+			</ul>
+</footer>
+
+
+
+</body>
+</html>
