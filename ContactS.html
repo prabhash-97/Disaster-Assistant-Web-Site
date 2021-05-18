@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="SiteC.css"/>
 
-
-
 <title>Contact Us</title>
+
 </head>
 
 <body>
@@ -35,14 +36,19 @@
 </div>
 
 <div class="middle">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
-  current members
-  <br> countries
+     <div class="contact">
+      <p style="font-size: 18px;"><i class="glyphicon glyphicon-envelope"></i> &nbsp; Email: <a href="#">blueheart@info.com</a></p>
+      <p style="font-size: 18px;"><i class="glyphicon glyphicon-earphone"></i> &nbsp; Telephone: +94(0) 71 2226756</p>
+      <p style="font-size: 18px;"><i class="glyphicon glyphicon-phone"></i> &nbsp; Mobile: +94(0) 71 2226756</p> 
+     </div>
+     <div class="contact" style="margin-left:-400px;">
+      <p style="font-size: 24px;">Follow Us On:</p>
+      <table style="margin-left: 150px; margin-top:-40px;"><tr><td style="font-size: 20px;">Linkedin: &nbsp; &nbsp; &nbsp; </td><td><a href="#" class="fa fa-linkedin"></a></td></tr>
+             <tr><td style="font-size: 20px;">Instagram:  &nbsp; &nbsp; &nbsp;</td><td><a href="#" class="fa fa-instagram"></a></td></tr>
+             <tr><td style="font-size: 20px;">Twitter:  &nbsp; &nbsp; &nbsp;</td><td><a href="#" class="fa fa-twitter"></a></td></tr>
+             <tr><td style="font-size: 20px;">Facebook:  &nbsp; &nbsp; &nbsp;</td><td><a href="#" class="fa fa-facebook"></a></td></tr>
+      </table>
+      </div>
 </div>
 
 <div class="container">
@@ -185,7 +191,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+    <button type="submit" class="btn btn-warning" >Contact Me <span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 
@@ -194,15 +200,13 @@
 </div>
 
 <footer>
-	<ul class="navi">
-	<div class="lg">
-    <img src="Multimedia/png-clipart-donation-charitable-organization-charity-computer-icons-donate-miscellaneous-blue-removebg-preview.png" />
-  </div>
-  <p><a href="#"><center>CONTACT US</center></a></p>
+  <ul>
+  <div class="lg"><img src="Multimedia/png-clipart-donation-charitable-organization-charity-computer-icons-donate-miscellaneous-blue-removebg-preview.png" /></div>
+  <p><a href="ContactS.html" style="text-decoration: none;"><center>CONTACT US</center></a></p>
   <p style="margin-left: 530px;">Fallon One &copy; 2021 | All rights Reserved</p>
   </ul>
-
 </footer>
+
 </body>
 <style>
 * {
@@ -296,6 +300,32 @@ body {
   .section h1 {
     margin: 20px 6px;
   }
+}
+
+.btn-warning{
+  background-color: black;
+  color: white;
+  width: 150px;
+  font-size: 20px;
+
+}
+.btn-warning:hover{
+  background-color: transparent;
+  border:1px solid blue;
+  color: black;
+}
+/*midddle bar*/
+.middle{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 30px;
+}
+.contact{
+  border:1px solid red;
+  padding: 10px;
 }
 </style>
 

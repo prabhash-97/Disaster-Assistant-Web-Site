@@ -3,13 +3,14 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="SiteC.css"/>
 
-<style>:root { --j: 0; --p1: 1.5 }
-  .p1:nth-child(2n) { --j: 1 }
-</style>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
 <style>
 
 #btn--yp {
@@ -126,13 +127,13 @@ body{
 .btn-give{
   background-color:#B22222;
   width: 90%;
-  height: 64px;
+  height: 34px;
   margin: 10px;
 }
 
 .btn-text{
   color: #fff;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #input-amount{
@@ -141,7 +142,7 @@ body{
 
 .input-group{
   width: 100%;
-  height: 64px;
+  height: 34px;
 
 }
 .input-group-addon, .form-control{
@@ -149,7 +150,7 @@ body{
   background-color:#fff;
   color: #69C4EE;
   width: 10%;
-  height: 64px;
+  height: 34px;
 }
 
 .form-control{
@@ -161,6 +162,43 @@ body{
   padding: 60px 20px; 
 }
 
+
+ .pb-modalreglog-container
+    {
+        margin-top: 100px;
+    }
+
+    .pb-modalreglog-legend
+    {
+        text-align: center;
+    }
+
+    .pb-modalreglog-input-group
+    {
+        margin: auto;
+    }
+
+    .pb-modalreglog-submit
+    {
+        margin-left: 5px;
+
+    }
+
+    .pb-modalreglog-form-reg
+    {
+        text-align: center;
+    }
+
+    .pb-modalreglog-footer p
+    {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #pb-modalreglog-progressbar
+    {
+        border-radius: 2px;
+    }
 </style>
 
 </head>
@@ -200,7 +238,7 @@ While a lot of goods are coming in, distribution remains a problem. This means v
     <button type="button" class="btn btn-amount btn-amount-number">Rs.500</button>
     <button type="button" class="btn btn-amount btn-amount-number" >Rs.1000</button>
     <button type="button" class="btn btn-amount btn-amount-number">Rs.5000</button>
-    <button type="button" id="other" class="btn btn-amount">Other</button>
+    <button type="button" id="other" class="btn btn-amount"  data-toggle="modal" data-target="#myModal1">Other</button>
   </div>
     
     <div id="input-amount">
@@ -217,19 +255,148 @@ While a lot of goods are coming in, distribution remains a problem. This means v
   <label><input type="checkbox" value="monthly"/>Monthly Recurring Gift</label>
 </div>
 
-  <button type="button" class="btn btn-give"><span class="btn-text">Give By Card</span></button>
-  <button type="button" class="btn btn-give"><span class="btn-text">Paypal</span></button>
+  <button type="button" class="btn btn-give" data-toggle="modal" data-target="#myModal2"><span class="btn-text">Give By Card</span></button>
+  <a href="www.paypal.com"><button type="button" class="btn btn-give"><span class="btn-text">Paypal</span></button></a>
  
   </div>
 
   </div>
+
+<!-- Payment Modal - START -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content" style="width: 200%;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Payment Registration Form</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="pb-modalreglog-form-reg">
+                                <div class="form-group">
+                                    <div id="pb-modalreglog-progressbar"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <div class="input-group pb-modalreglog-input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email"  style="font-size: 15px;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Full Name</label>
+                                    <div class="input-group pb-modalreglog-input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Full Name"  style="font-size: 15px;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Current Address</label>
+                                    <div class="input-group pb-modalreglog-input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+                                        <input type="text" class="form-control" id="countries" placeholder="Address"  style="font-size: 15px;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Conatct No:</label>
+                                    <div class="input-group pb-modalreglog-input-group">
+                                       <input id="age" type="number" class="form-control" placeholder="Contact No"  style="font-size: 15px;">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <label for="accounNo">Account Number:</label>
+                                        <div class="input-group pb-modalreglog-input-group">
+                                        <input id="accounNo" type="number" class="form-control" placeholder="Account Number"  style="font-size: 15px;">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <label for="amunt">Amount:</label>
+                                        <div class="input-group pb-modalreglog-input-group">
+                                        <input id="amunt" type="number" class="form-control" placeholder="Amount"  style="font-size: 15px;">
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td colspan="2">
+                                        <label for="cardNo">Card Number:</label>
+                                        <div class="input-group pb-modalreglog-input-group">
+                                        <input id="cardNo" type="number" class="form-control" placeholder="Card No"  style="font-size: 15px;">
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <label for="carcType">Card Type:</label>
+                                      </td>
+                                      <td>
+                                        <div class="input-group pb-modalreglog-input-group">
+                                        Visa:<input id="visa" type="radio" class="form-control" value="Visa">
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <div class="input-group pb-modalreglog-input-group">
+                                        Mastercard:<input id="master" type="radio" class="form-control" value="Master">
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Payment Modal - END -->
+
+
+<!-- Payment Amount- START -->
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content" style="width: 200%;">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Here Give Payment Amount</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="pb-modalreglog-form-reg">
+                                <div class="form-group">
+                                    <div id="pb-modalreglog-progressbar"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <div class="input-group pb-modalreglog-input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="amount" class="form-control" id="inputAmount" placeholder="00000.00"  style="font-size: 15px;">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Payment Amount - END -->
   
 <footer style="width: 1400px;">
 			<ul class="navi">
 				<div class="lg">
         <img src="Multimedia/png-clipart-donation-charitable-organization-charity-computer-icons-donate-miscellaneous-blue-removebg-preview.png" />
         </div>
-        <p><a href="ContactS.html"><center>CONTACT US</center></a></p>
+        <p><a href="ContactS.html"  style="text-decoration: none;"><center>CONTACT US</center></a></p>
         <p style="margin-left: 530px;">Fallon One &copy; 2021 | All rights Reserved</p>
 			</ul>
 </footer>
